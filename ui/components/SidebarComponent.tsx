@@ -197,6 +197,20 @@ export default function SidebarComponent(props: { showLogout: boolean }) {
     >
       <SidebarItem
         as={Link}
+        href={'/peers/dashboard'}
+        leadingIcon={<Icon name='dashboard' />}
+      >
+        {sidebarState === 'open' && 'Peers Dashboard'}
+      </SidebarItem>
+      <SidebarItem
+        as={Link}
+        href={'/mirrors/dashboard'}
+        leadingIcon={<Icon name='space_dashboard' />}
+      >
+        {sidebarState === 'open' && 'Mirrors Dashboard'}
+      </SidebarItem>
+      <SidebarItem
+        as={Link}
         href={'/peers'}
         leadingIcon={<Icon name='cable' />}
       >
